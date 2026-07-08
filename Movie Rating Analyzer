@@ -1,0 +1,12 @@
+def percentage_liked(ratings):
+
+    liked = [rating >= 4 for rating in ratings]
+
+    percentage = (sum(liked) / len(liked)) * 100
+
+    return percentage
+
+
+ratings = [5, 4, 3, 2, 5, 4, 4, 5, 1]
+
+print("Likes:", percentage_liked(ratings), "%")
