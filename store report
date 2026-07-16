@@ -1,0 +1,18 @@
+import pandas as pd
+
+sales = {
+    "Product": ["Mouse", "Keyboard", "Laptop", "Mouse", "Laptop"],
+    "Quantity": [5, 3, 2, 4, 1],
+    "Price": [500, 1200, 50000, 500, 50000]
+}
+
+df = pd.DataFrame(sales)
+
+df["Revenue"] = df["Quantity"] * df["Price"]
+
+print(df)
+
+print("\nTotal Revenue:", df["Revenue"].sum())
+
+print("\nRevenue by Product")
+print(df.groupby("Product")["Revenue"].sum())
