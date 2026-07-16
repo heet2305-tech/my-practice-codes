@@ -1,0 +1,4 @@
+def prettify_graph(graph):
+    """Modify the given graph according to Jimmy's requests..."""
+    graph.set_title("Results of 500 slot machine pulls")
+    # Complete steps 2 and 3 here
