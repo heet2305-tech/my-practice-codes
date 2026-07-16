@@ -1,0 +1,15 @@
+import pandas as pd
+
+employees = {
+    "Name": ["John", "Sara", "Mike", "Anna", "David"],
+    "Department": ["HR", "IT", "IT", "Sales", "HR"],
+    "Salary": [35000, 60000, 55000, 45000, 38000]
+}
+
+df = pd.DataFrame(employees)
+
+print("Average Salary by Department")
+print(df.groupby("Department")["Salary"].mean())
+
+print("\nHighest Paid Employee")
+print(df.loc[df["Salary"].idxmax()])
